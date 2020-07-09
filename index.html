@@ -19,8 +19,7 @@
     <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span class="navbar-toggler-icon"></span>
-
+                    <span> class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" alt=""></a>
                 <div class="collapse navbar-collapse" id="Navbar">
@@ -41,10 +40,13 @@
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>               
+                <div class="col-12 col-sm-3 align-self-center">
+                  <img src="img/logo.png" class="img-fluid" alt="Logo">
                 </div>
-                <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid" alt="">
-                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                  <a href="#reservetable" style="text-decoration: none;"><button type="button" class="btn btn-warning btn-block text-dark font-weight-bold ">Reserve Table</button></a>
+                </div>               
             </div>
         </div>
     </header>
@@ -57,7 +59,7 @@
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
                     <img src="img/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="uthappizza">
-                    <div class="media-body">
+                    <div class="media-body" id="con1">
                         <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
                         <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
@@ -67,12 +69,17 @@
 
 
         <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class="col col-sm order-sm-last col-md">
+                <div class="media">
+                    <div class="media-body" id="con2">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img src="img/buffet.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="Buffet">
+                </div>                
             </div>
         </div>
 
@@ -83,13 +90,53 @@
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
                     <img src="img/alberto.png" class="d-flex img-thumbnail align-self-center mr-3" alt="alberto">
-                    <div class="media-body">
+                    <div class="media-body" id="con3">  
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
                         <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row row-content align-items-center" id="reservetable">
+            <div class="col-12 col-sm-8 m-auto">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="form-group row">
+                                <label for="guest" class="col-md-2 col-form-label">Number of Guests</label>
+                                <div class="col-md-10">
+                                    <label><input type="radio" name="guest" class="radio-inline"> 1&nbsp</label>
+                                    <label><input type="radio" name="guest" class="radio-inline"> 2&nbsp</label>
+                                    <label><input type="radio" name="guest" class="radio-inline"> 3&nbsp</label>
+                                    <label><input type="radio" name="guest" class="radio-inline"> 4&nbsp</label>
+                                    <label><input type="radio" name="guest" class="radio-inline"> 5&nbsp</label>
+                                    <label><input type="radio" name="guest" class="radio-inline"> 6&nbsp</label>
+                                </div>
+                            </div> 
+                            <div class="from-group row">
+                                <label for="datetime" class="col-md-2 col-form-label">Date and Time</label>
+                                <div class="col-12 col-md-3">
+                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-md-3">
+                                    <input type="text" class="form-control" id="time" name="datetime" placeholder="Time">
+                                </div>
+                            </div><br>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-primary">
+                                        Reserve
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -138,6 +185,30 @@
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script>
+        var x = document.getElementById('con1');
+        var y = x.querySelectorAll("p");
+           var i;
+           for (i = 0; i < y.length; i++) {
+               y[i].classList.add("d-none", "d-sm-block");
+           }
+    </script>
+    <script>
+        var x = document.getElementById('con2');
+        var y = x.querySelectorAll("p");
+           var i;
+           for (i = 0; i < y.length; i++) {
+               y[i].classList.add("d-none", "d-sm-block");
+           }
+    </script>
+    <script>
+        var x = document.getElementById('con3');
+        var y = x.querySelectorAll("p");
+           var i;
+           for (i = 0; i < y.length; i++) {
+               y[i].classList.add("d-none", "d-sm-block");
+           }
+    </script>
 
 </body>
 
