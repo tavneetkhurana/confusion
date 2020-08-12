@@ -12,7 +12,7 @@
      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-     <link rel="stylesheet" href="css/style.css">    
+     <link rel="stylesheet" href="css/styles.css">    
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                         <li class="nav-item "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal" href="">
+                        <a id="loginButton" type="button" role="button" href="#">
                             <span class="fa fa-sign-in"> Login</span>
                         </a>
                     </span>
@@ -88,8 +88,8 @@
                   <img src="img/logo.png" class="img-fluid" alt="Logo">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                  <a href="#" style="text-decoration: none;"><button type="button"
-                    data-toggle="modal" data-target="#reservationModal" class="btn btn-warning btn-block text-dark font-weight-bold ">Reserve Table</button></a>
+                  <a href="#" id="reservationButton" style="text-decoration: none;" type="button"
+                    class="btn btn-warning btn-block text-white font-weight-bold ">Reserve Table</a>
                 </div>               
             </div>
         </div>
@@ -388,6 +388,16 @@
            for (i = 0; i < y.length; i++) {
                y[i].classList.add("d-none", "d-sm-block");
            }
+    </script>
+
+    <script>
+        $("#loginButton").click(function(){
+            $('#loginModal').modal('show');
+        });
+
+        $("#reservationButton").click(function(){
+            $('#reservationModal').modal('show');
+        });
     </script>
 </body> 
 
