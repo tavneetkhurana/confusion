@@ -50,8 +50,8 @@ body {
 #carouselButton {
   right: 0px;
   position: absolute;
-  bottom: 0;
-  z-index: 2; }
+  bottom: 0px;
+  z-index: 1; }
 
 .modal-content .modal-header {
   background: #512DA8;
